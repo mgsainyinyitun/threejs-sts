@@ -1,9 +1,11 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame, useThree } from '@react-three/fiber'
 import { a } from '@react-spring/three';
 
 import islandScene from '../../assets/3d/foxs_islands.glb'
+let intervalId;
+let isMouseDown = false;
 
 export const Island = ({ isRotating, setIsRotating, ...props }) => {
     const { nodes, materials } = useGLTF(islandScene)
@@ -19,11 +21,21 @@ export const Island = ({ isRotating, setIsRotating, ...props }) => {
         setIsRotating(true);
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
         lastX.current = clientX;
+
+        isMouseDown = true;
+        intervalId = setInterval(() => {
+            if (isMouseDown) {
+                islandRef.current.rotation.y += -1*0.1 * 0.01 * Math.PI;
+            }
+        }, 10); // Increase the counter every 100 milliseconds
+
     }
     const handlePointerUp = e => {
         e.stopPropagation;
         e.preventDeault;
         setIsRotating(false);
+        isMouseDown = false;
+        clearInterval(intervalId);
     }
 
     const handlePointerMove = e => {
@@ -32,8 +44,8 @@ export const Island = ({ isRotating, setIsRotating, ...props }) => {
         if (isRotating) {
             const clientX = e.touches ? e.touches[0].clientX : e.clientX;
             const delta = (clientX - lastX.current) / viewport.width;
-            islandRef.current.rotation.y += delta * 0.01 * Math.PI;
 
+            islandRef.current.rotation.y += delta * 0.01 * Math.PI;
             lastX.current = clientX;
             rotationSpeed.current = delta * 0.01 * Math.PI;
         }
@@ -58,17 +70,6 @@ export const Island = ({ isRotating, setIsRotating, ...props }) => {
             setIsRotating(false);
         }
     }
-
-    // useFrame(() => {
-    //     if (!isRotating) {
-    //         rotationSpeed.current *= dampingFactor;
-    //         if (Math.abs(rotationSpeed.current) < 0.001) {
-    //             rotationSpeed.current = 0;
-    //         }
-    //     } else {
-    //         const rotation = islandRef.current.rotation.y;
-    //     }
-    // });
 
     // This function is called on each frame update
     useFrame(() => {

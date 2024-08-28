@@ -5,6 +5,8 @@ import { Island } from '../models/Island'
 import Bird from '../models/Bird'
 import Sky from '../models/Sky'
 import Plane from '../models/Plane'
+import { House } from '../models/House'
+import { WorkPlace } from '../models/WorkPlace'
 {/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
          POPUP
       </div> */}
@@ -39,7 +41,7 @@ export const Home = () => {
 
   return (
     <section className='w-full h-screen relative'>
-      <Canvas className='w-full h-screen bg-transparent'
+      <Canvas className='w-full h-screen bg-black'
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
@@ -56,6 +58,24 @@ export const Home = () => {
             isRotating={isRotation}
             setIsRotating={setIsRotation}
           />
+
+          {/* <House
+            position={[0, -1, 0]}
+            scale={[0.5, 0.5, 0.5]}
+            rotation={islandRotation}
+            isRotating={isRotation}
+            setIsRotating={setIsRotation}
+          /> */}
+
+          {/* <WorkPlace
+            position={[0, -1, 0]}
+            scale={[0.5, 0.5, 0.5]}
+            rotation={islandRotation}
+            isRotating={isRotation}
+            setIsRotating={setIsRotation}
+          /> */}
+
+
           <Plane
             isRotation={isRotation}
             scale={planeScale}

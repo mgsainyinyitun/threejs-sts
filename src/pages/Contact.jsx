@@ -3,6 +3,8 @@ import { Canvas } from '@react-three/fiber';
 import React, { Suspense, useRef, useState } from 'react'
 import Girl from '../models/Girl';
 import { Loader } from '../components/Loader';
+import useAlert from '../hooks/useAlert';
+import Alert from '../components/Alert';
 
 export const Contact = () => {
   const formRef = useRef(null);
@@ -16,11 +18,12 @@ export const Contact = () => {
 
   const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
-    console.log('change', e);
-    console.log(e.target.value);
-    console.log(e.target.name);
     setForm({ ...form, [e.target.name]: e.target.value })
   };
+
+  const {alert,showAlert,hideAlert} = useAlert();
+
+
   const handleFocus = () => setCurrentAnimation('ParadeWalk');
   const handleBlur = () => setCurrentAnimation('idle');
 
@@ -42,7 +45,8 @@ export const Contact = () => {
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
     ).then(() => {
       setLoading(false);
-      alert('Thank you. I will get back to you as soon as possible.');
+      // alert('Thank you. I will get back to you as soon as possible.');
+      showAlert({show:true,msg:'Thank you. I will get back to you as soon as possible.',type:'success'});
       setForm({
         name: '',
         email: '',
@@ -54,7 +58,7 @@ export const Contact = () => {
       }, 10000)
 
     }).catch(error => {
-      alert('Something went wrong. Please try again.');
+      showAlert({show:true,msg:'Something went wrong. Please try again.',type:'danger'});
       setLoading(false);
       console.log(error);
       setTimeout(() => {
@@ -65,6 +69,8 @@ export const Contact = () => {
 
   return (
     <section className='relative flex lg:flex-row flex-col max-continer w-full h-screen pt-20'>
+
+    {alert.show && <Alert {...alert} /> }
       <div className='flex-1 items-center min-w-[50%] flex flex-col'>
         <h1 className='text-lg font-bold text-center'>
           Get in Touch

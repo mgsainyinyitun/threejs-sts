@@ -8,11 +8,11 @@ import Plane from '../models/Plane'
 import { House } from '../models/House'
 import { WorkPlace } from '../models/WorkPlace'
 import Dragon from '../models/Dragon'
-{/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
-         POPUP
-      </div> */}
+import HomeInfo from '../components/HomeInfo'
+
 export const Home = () => {
   const [isRotation, setIsRotation] = useState(false);
+  const [currentStage, setCurrentStage] = useState(1);
   const adjustIslndForScreenSize = () => {
     let screenScale = null;
     let screenPosition = [0, -6.5, -45];
@@ -44,7 +44,13 @@ export const Home = () => {
 
   return (
     <section className='w-full h-screen relative'>
-      <Canvas className='w-full h-screen bg-black'
+
+
+      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+        {currentStage && <HomeInfo currentStage={currentStage} />}
+      </div>
+
+      <Canvas className='w-full h-screen bg-gray-500/20'
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
@@ -52,7 +58,7 @@ export const Home = () => {
           <ambientLight intensity={0.5} />
           <hemisphereLight skyColor='#b1e1ff' groundColor='#000000' />
           <Bird />
-          <Dragon/>
+          <Dragon />
           <Sky isRotating={isRotation} />
 
           <Island
@@ -61,24 +67,9 @@ export const Home = () => {
             rotation={islandRotation}
             isRotating={isRotation}
             setIsRotating={setIsRotation}
+            currentStage={currentStage}
+            setCurrentStage={setCurrentStage}
           />
-
-          {/* <House
-            position={[0, -1, 0]}
-            scale={[0.5, 0.5, 0.5]}
-            rotation={islandRotation}
-            isRotating={isRotation}
-            setIsRotating={setIsRotation}
-          /> */}
-
-          {/* <WorkPlace
-            position={[0, -1, 0]}
-            scale={[0.5, 0.5, 0.5]}
-            rotation={islandRotation}
-            isRotating={isRotation}
-            setIsRotating={setIsRotation}
-          /> */}
-
 
           <Plane
             isRotation={isRotation}

@@ -7,13 +7,16 @@ import Sky from '../models/Sky'
 import Plane from '../models/Plane'
 import { House } from '../models/House'
 import { WorkPlace } from '../models/WorkPlace'
+import Dragon from '../models/Dragon'
 {/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
          POPUP
       </div> */}
 export const Home = () => {
   const [isRotation, setIsRotation] = useState(false);
   const adjustIslndForScreenSize = () => {
-    let screenScale = null, screenPosition = [0, -6.5, -45];
+    let screenScale = null;
+    let screenPosition = [0, -6.5, -45];
+    //let screenPosition = [3,2,-20];
     let rotation = [0.1, 4.7, 0];
     if (window.innerWidth < 768) {
       screenScale = [0.9, 0.9, 0.9];
@@ -49,6 +52,7 @@ export const Home = () => {
           <ambientLight intensity={0.5} />
           <hemisphereLight skyColor='#b1e1ff' groundColor='#000000' />
           <Bird />
+          <Dragon/>
           <Sky isRotating={isRotation} />
 
           <Island

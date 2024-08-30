@@ -68,7 +68,7 @@ export const Contact = () => {
   }
 
   return (
-    <section className='relative flex lg:flex-row flex-col max-continer w-full h-screen pt-20'>
+    <section className='relative flex lg:flex-row flex-col max-continer w-full h-[100vh] pt-20'>
 
     {alert.show && <Alert {...alert} /> }
       <div className='flex-1 items-center min-w-[50%] flex flex-col'>

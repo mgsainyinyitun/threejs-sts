@@ -1,13 +1,13 @@
 import emailjs from '@emailjs/browser';
 import { Canvas } from '@react-three/fiber';
-import React, { Suspense, useRef, useState } from 'react'
+import React, { Suspense, useState } from 'react'
 import Girl from '../models/Girl';
 import { Loader } from '../components/Loader';
 import useAlert from '../hooks/useAlert';
 import Alert from '../components/Alert';
+import MailBox from '../models/MailBox';
 
 export const Contact = () => {
-  const formRef = useRef(null);
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -21,7 +21,7 @@ export const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value })
   };
 
-  const {alert,showAlert,hideAlert} = useAlert();
+  const { alert, showAlert, hideAlert } = useAlert();
 
 
   const handleFocus = () => setCurrentAnimation('ParadeWalk');
@@ -46,7 +46,7 @@ export const Contact = () => {
     ).then(() => {
       setLoading(false);
       // alert('Thank you. I will get back to you as soon as possible.');
-      showAlert({show:true,msg:'Thank you. I will get back to you as soon as possible.',type:'success'});
+      showAlert({ show: true, msg: 'Thank you. I will get back to you as soon as possible.', type: 'success' });
       setForm({
         name: '',
         email: '',
@@ -58,7 +58,7 @@ export const Contact = () => {
       }, 10000)
 
     }).catch(error => {
-      showAlert({show:true,msg:'Something went wrong. Please try again.',type:'danger'});
+      showAlert({ show: true, msg: 'Something went wrong. Please try again.', type: 'danger' });
       setLoading(false);
       console.log(error);
       setTimeout(() => {
@@ -70,13 +70,14 @@ export const Contact = () => {
   return (
     <section className='relative flex lg:flex-row flex-col max-continer w-full h-[100vh] pt-20'>
 
-    {alert.show && <Alert {...alert} /> }
-      <div className='flex-1 items-center min-w-[50%] flex flex-col'>
-        <h1 className='text-lg font-bold text-center'>
+      {alert.show && <Alert {...alert} />}
+
+      <div className='items-center min-w-[50%] flex flex-col'>
+        <h1 className='text-4xl font-bold text-center text-blue-500'>
           Get in Touch
         </h1>
 
-        <div className='w-full flex justify-center items-center pl-5 pr-5 pb-5 md:pl-24 md:pr-24'>
+        <div className='md:w-[70%] w-full flex justify-center items-center pl-5 pr-5 pb-5 md:pl-24 md:pr-24'>
           <form onSubmit={handlSubmit} className='bg-blue-300 rounded-xl w-full min-w-[50%] flex flex-col gap-7 mt-14 p-5'>
             <div className='flex flex-col gap-2'>
               <label className='text-black-500 font-semibold'>Name</label>
@@ -107,14 +108,27 @@ export const Contact = () => {
           <directionalLight intensity={2.5} position={[0, 0, 5]} />
           <Suspense fallback={<Loader />}>
             <Girl
-              position={[0, -2, 0]}
-              rotation={[0, -0.5, 0]}
+              position={[-0.2, -1, 0.5]}
+              rotation={[0.1, -0.4, 0]}
               scale={1.5}
               currentAnimation={currentAnimation}
             />
+             <MailBox />
           </Suspense>
         </Canvas>
       </div>
+
+      {/* <div className='z-10 absolute bottom-0 left-0 w-full h-2/5'>
+        <Canvas
+          camera={{ position: [0, 0, 5] }}
+          className='absolute bottom-0 right-0'
+        >
+          <directionalLight intensity={2.5} position={[0, 0, 5]} />
+          <Suspense fallback={<Loader />}>
+           
+          </Suspense>
+        </Canvas>
+      </div> */}
     </section>
   )
 }

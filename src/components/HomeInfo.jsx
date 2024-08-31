@@ -25,13 +25,13 @@ const HomeInfo = ({ currentStage }) => {
             </h1>),
         2: (<InfoBox
             text={'Work with many projects and learn new technologies and picked up many skills along the way.'}
-            link={'https://sainyinyitun.web.app/'}
+            link={'/about'}
             btnText={'Learn more'}
         />),
         3: ((<InfoBox
             text={'Lean and practice with a lot of project and create some of my own. Want to look some of them?'}
-            link={'https://sainyinyitun.web.app/'}
-            btnText={'Visit my portfoloio'}
+            link={'/project'}
+            btnText={'Visit my Projects'}
         />)),
         4: ((<InfoBox
             text={'Need to contact me? Feel free to send me a message and I will get back to you as soon as possible.'}

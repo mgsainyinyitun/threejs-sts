@@ -1,86 +1,49 @@
-import { meta, shopify, starbucks, tesla } from "../../assets/images";
+import { dat, lbu, meta, shopify, starbucks, technonet, tesla, yse } from "../../assets/images";
 import {
+    bootstrap,
+    java,
     car,
     contact,
     css,
     estate,
-    express,
     git,
     github,
     html,
     javascript,
     linkedin,
-    mongodb,
-    motion,
     mui,
-    nextjs,
     nodejs,
     pricewise,
     react,
     redux,
-    sass,
     snapgram,
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    cplusplus,
+    python,
+    php,
+    springboot,
+    django,
+    spring
 } from "../../assets/icons";
 
 export const skills = [
-    {
-        imageUrl: css,
-        name: "CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: express,
-        name: "Express",
-        type: "Backend",
-    },
-    {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
-    },
-    {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
-    },
     {
         imageUrl: html,
         name: "HTML",
         type: "Frontend",
     },
     {
+        imageUrl: css,
+        name: "CSS",
+        type: "Frontend",
+    },
+    {
         imageUrl: javascript,
         name: "JavaScript",
         type: "Frontend",
-    },
-    {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
     },
     {
         imageUrl: react,
@@ -93,8 +56,13 @@ export const skills = [
         type: "State Management",
     },
     {
-        imageUrl: sass,
-        name: "Sass",
+        imageUrl: mui,
+        name: "Material-UI",
+        type: "Frontend",
+    },
+    {
+        imageUrl: bootstrap,
+        name: "Bootstrap CS",
         type: "Frontend",
     },
     {
@@ -103,18 +71,68 @@ export const skills = [
         type: "Frontend",
     },
     {
+        imageUrl: git,
+        name: "Git",
+        type: "Version Control",
+    },
+    {
+        imageUrl: github,
+        name: "GitHub",
+        type: "Version Control",
+    },
+    {
         imageUrl: typescript,
         name: "TypeScript",
         type: "Frontend",
-    }
+    },
+    {
+        imageUrl: nodejs,
+        name: "Node.js",
+        type: "Backend",
+    },
+    {
+        imageUrl: java,
+        name: "Java",
+        type: "Backend",
+    },
+    {
+        imageUrl: python,
+        name: "Python",
+        type: "Backend",
+    },
+    {
+        imageUrl: cplusplus,
+        name: "C++",
+        type: "Backend",
+    },
+    {
+        imageUrl: php,
+        name: "PHP",
+        type: "Backend",
+    },
+    {
+        imageUrl: spring,
+        name: "Spring MVC",
+        type: "Backend",
+    },
+    {
+        imageUrl: springboot,
+        name: "Spring Boot",
+        type: "Backend",
+    },
+    {
+        imageUrl: django,
+        name: "Django",
+        type: "Backend",
+    },
 ];
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
+        title: "Programming Trainer",
+        company_name: "TechnoNet",
+        icon: technonet,
+        iconBg: "white",
         date: "March 2020 - April 2021",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
@@ -124,9 +142,9 @@ export const experiences = [
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "Web Developer",
+        company_name: "Youth Societh for Education (YSE)",
+        icon: yse,
         iconBg: "#fbc3bc",
         date: "Jan 2021 - Feb 2022",
         points: [
@@ -138,9 +156,9 @@ export const experiences = [
     },
     {
         title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
+        company_name: "LBU",
+        icon: lbu,
+        iconBg: "white",
         date: "Jan 2022 - Jan 2023",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
@@ -150,9 +168,9 @@ export const experiences = [
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
+        title: "Senior Programmer",
+        company_name: "DIR-ACE",
+        icon: dat,
         iconBg: "#a2d2ff",
         date: "Jan 2023 - Present",
         points: [
@@ -173,12 +191,12 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/mgsainyinyitun',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/sai-nyi-13356517b',
     }
 ];
 

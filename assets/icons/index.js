@@ -26,6 +26,14 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import bootstrap from './bootstrap.svg'
+import java from './java.png'
+import cplusplus from './cplusplus.png'
+import python from './python.svg'
+import php from './php.svg'
+import springboot from './springboot.svg'
+import django from './django.png'
+import spring from './spring.svg'
 
 export {
     css,
@@ -55,5 +63,13 @@ export {
     arrow,
     contact,
     soundon,
-    soundoff
+    soundoff,
+    bootstrap,
+    java,
+    cplusplus,
+    python,
+    php,
+    springboot,
+    django,
+    spring
 }

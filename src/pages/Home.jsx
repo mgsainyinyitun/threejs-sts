@@ -11,6 +11,7 @@ import Dragon from '../models/Dragon'
 import HomeInfo from '../components/HomeInfo'
 import sakura from '../../assets/sakura.mp3';
 import { soundoff, soundon } from '../../assets/icons'
+import Astronaut from '../models/Astronaut'
 
 export const Home = () => {
   const audioRef = useRef(new Audio(sakura));
@@ -24,7 +25,7 @@ export const Home = () => {
     let screenScale = null;
     let screenPosition = [0, -6.5, -45];
     //let screenPosition = [3,2,-20];
-    let rotation = [0.1, 4.7, 0];
+    let rotation = [0.09, 4.7, 0];
     if (window.innerWidth < 768) {
       screenScale = [0.9, 0.9, 0.9];
     } else {
@@ -69,12 +70,12 @@ export const Home = () => {
         {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
 
-      <Canvas className='w-full h-screen bg-gray-500/20'
+      <Canvas className='w-full h-screen bg-black'
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
-          <directionalLight position={[1, 1, 1]} intensity={2} />
-          <ambientLight intensity={0.5} />
+          <directionalLight position={[1, 1, 1]} intensity={0.1} />
+          <ambientLight intensity={0.005} />
           <hemisphereLight skyColor='#b1e1ff' groundColor='#000000' />
           <Bird />
           <Dragon />
@@ -97,6 +98,7 @@ export const Home = () => {
             rotation={planeRotation}
           />
         </Suspense>
+        {/* <OrbitControls/> */}
       </Canvas>
 
       <div className='absolute bottom-2 left-2 flex'>

@@ -7,7 +7,7 @@ import islandScene from '../../assets/3d/foxs_islands.glb'
 let intervalId;
 let isMouseDown = false;
 
-export const Island = ({ isRotating, setIsRotating,currentStage,setCurrentStage, ...props }) => {
+export const Island = ({ isRotating, setIsRotating, currentStage, setCurrentStage, ...props }) => {
     const { nodes, materials } = useGLTF(islandScene)
     const islandRef = useRef();
     const { gl, viewport } = useThree();
@@ -22,12 +22,15 @@ export const Island = ({ isRotating, setIsRotating,currentStage,setCurrentStage,
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
         lastX.current = clientX;
 
-        isMouseDown = true;
-        intervalId = setInterval(() => {
-            if (isMouseDown) {
-                islandRef.current.rotation.y += -1*0.1 * 0.01 * Math.PI;
-            }
-        }, 10); // Increase the counter every 100 milliseconds
+        const delta = (clientX - lastX.current) / viewport.width;
+        if (delta === 0) {
+            isMouseDown = true;
+            intervalId = setInterval(() => {
+                if (isMouseDown) {
+                    islandRef.current.rotation.y += -1 * 0.1 * 0.01 * Math.PI;
+                }
+            }, 10);
+        }
 
     }
     const handlePointerUp = e => {
@@ -55,13 +58,13 @@ export const Island = ({ isRotating, setIsRotating,currentStage,setCurrentStage,
         if (e.key === 'ArrowLeft') {
             if (!isRotating) {
                 setIsRotating(true);
-                islandRef.current.rotation.y += 0.01* Math.PI;
+                islandRef.current.rotation.y += 0.01 * Math.PI;
                 islandRef.current.rotation.y += 0.01 * Math.PI;
             }
         } else if (e.key === 'ArrowRight') {
             if (!isRotating) {
                 setIsRotating(true);
-                islandRef.current.rotation.y -= 0.01* Math.PI;
+                islandRef.current.rotation.y -= 0.01 * Math.PI;
                 islandRef.current.rotation.y -= 0.01 * Math.PI;
             }
         }
@@ -106,7 +109,7 @@ export const Island = ({ isRotating, setIsRotating,currentStage,setCurrentStage,
                     setCurrentStage(1);
                     break;
                 default:
-                setCurrentStage(null);
+                    setCurrentStage(null);
             }
         }
     });

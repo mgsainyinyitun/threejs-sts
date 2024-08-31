@@ -1,4 +1,4 @@
-import { dat, lbu, meta, shopify, starbucks, technonet, tesla, yse } from "../../assets/images";
+import { dat, lbu, technonet, yse } from "../../assets/images";
 import {
     bootstrap,
     java,
@@ -135,10 +135,9 @@ export const experiences = [
         iconBg: "white",
         date: "March 2020 - April 2021",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Create couse curriculum in Java, Python, Django and Web design.",
+            "Responsibe to share knowledge about programming subjects such as mainly in Java.",
+            "Create various projects for demonstration and training.",
         ],
     },
     {
@@ -148,10 +147,10 @@ export const experiences = [
         iconBg: "#fbc3bc",
         date: "Jan 2021 - Feb 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Develop YSE Task Tracker that is used for internal task management and project management using React.js, MUI library and Firebase database.",
+            "Develop FAQ pages and firebase rules testing function for YSE Portal project using React.js, Firebase Function and Firebase Database.",
+            "Adding new pages for YSE website using WIX CMS.",
+            "Make sure web app is responsive and useable on all devices.",
         ],
     },
     {
@@ -161,10 +160,13 @@ export const experiences = [
         iconBg: "white",
         date: "Jan 2022 - Jan 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
             "Participating in code reviews and providing constructive feedback to other developers.",
+            "Develop new features of Learning Management System (LMS) using Java, Spring MVC and PostgreSQL database.",
+            "Adding new Student Verification feature that enable to student to check their data on website.",
+            "Adding new page and new feature to WordPress website.",
+            "Develop REST API using Spring MVC and integrate with WordPress website (PHP).",
+            "Implementing responsive design and ensuring cross-browser compatibility.",
+            "Operation and maintenance of AWS EC2 server that is used to host WordPress and LMS."
         ],
     },
     {
@@ -174,9 +176,11 @@ export const experiences = [
         iconBg: "#a2d2ff",
         date: "Jan 2023 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
+            "Developing and maintaining web applications using java and other related technologies.",
+            "Developing and maintenance project of Internet trading front system and batch system, using Java, PLSQL, shell languages and Oracle database.",
+            "Perform from requirement investigation to unit testing, integration testing, basic design and detail design.",
+            "Develop various tool using Java, VBA, VBS, C-Shell, PowerShell language, for performance increase and quality improvement for various projects.",
+            "Developed “Integration testing support and screen JSP investigation tool” using JavaFX and the tool win second price in QC competition.",
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },

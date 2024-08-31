@@ -6,6 +6,7 @@ import { Loader } from '../components/Loader';
 import useAlert from '../hooks/useAlert';
 import Alert from '../components/Alert';
 import MailBox from '../models/MailBox';
+import { OrbitControls } from '@react-three/drei';
 
 export const Contact = () => {
   const [form, setForm] = useState({
@@ -68,11 +69,10 @@ export const Contact = () => {
   }
 
   return (
-    <section className='relative flex lg:flex-row flex-col max-continer w-full h-[100vh] pt-20'>
-
+    <section className='relative flex lg:flex-row flex-col w-full pt-20 magicpattern overflow-hidden'>
       {alert.show && <Alert {...alert} />}
 
-      <div className='items-center min-w-[50%] flex flex-col'>
+      <div className='items-center min-w-[50%] flex flex-col h-full'>
         <h1 className='text-4xl font-bold text-center text-blue-500'>
           Get in Touch
         </h1>
@@ -101,7 +101,7 @@ export const Contact = () => {
         </div>
       </div>
 
-      <div className='lg:w-1/2 w-full lg:h-auto md:h-[350px] h-[250px]'>
+      {/* <div className='lg:w-1/2 w-full lg:h-auto md:h-[350px] h-[250px]'>
         <Canvas
           camera={{ position: [0, 0, 5] }}
         >
@@ -116,19 +116,45 @@ export const Contact = () => {
              <MailBox />
           </Suspense>
         </Canvas>
-      </div>
-
-      {/* <div className='z-10 absolute bottom-0 left-0 w-full h-2/5'>
-        <Canvas
-          camera={{ position: [0, 0, 5] }}
-          className='absolute bottom-0 right-0'
-        >
-          <directionalLight intensity={2.5} position={[0, 0, 5]} />
-          <Suspense fallback={<Loader />}>
-           
-          </Suspense>
-        </Canvas>
       </div> */}
+
+      {/* <div className='text-white'>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/> 
+      </div>*/}
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </section>
   )
 }

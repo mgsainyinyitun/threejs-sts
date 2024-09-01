@@ -14,7 +14,7 @@ const MailBox = () => {
 
     return (
         <mesh
-            position={[-10, 0, -10]}
+            position={[-10, -2.5, -10]}
             rotation={[0, -0.4, 0]}
             scale={[0.005, 0.005, 0.005]}
             ref={mailRef}

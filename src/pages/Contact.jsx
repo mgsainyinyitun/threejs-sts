@@ -69,15 +69,17 @@ export const Contact = () => {
   }
 
   return (
-    <section className='relative flex lg:flex-row flex-col w-full pt-20 magicpattern overflow-hidden'>
+    <section className='relative flex lg:flex-row flex-col w-full pt-20 magicpattern'>
+      {
+        console.log(document.getElementById('#bdy'))
+      }
       {alert.show && <Alert {...alert} />}
-
-      <div className='items-center min-w-[50%] flex flex-col h-full'>
+      <div className='items-center flex flex-col lg:h-full lg:w-1/2 w-full'>
         <h1 className='text-4xl font-bold text-center text-blue-500'>
           Get in Touch
         </h1>
 
-        <div className='md:w-[70%] w-full flex justify-center items-center pl-5 pr-5 pb-5 md:pl-24 md:pr-24'>
+        <div className='md:w-[70%] w-full flex justify-center items-center pl-5 pr-5'>
           <form onSubmit={handlSubmit} className='bg-blue-300 rounded-xl w-full min-w-[50%] flex flex-col gap-7 mt-14 p-5'>
             <div className='flex flex-col gap-2'>
               <label className='text-black-500 font-semibold'>Name</label>
@@ -100,61 +102,23 @@ export const Contact = () => {
           </form>
         </div>
       </div>
-
-      {/* <div className='lg:w-1/2 w-full lg:h-auto md:h-[350px] h-[250px]'>
+      {/*md:h-[350px] h-[250px] */}
+      <div className='lg:w-1/2 w-full lg:h-full h-[100%]'>
         <Canvas
           camera={{ position: [0, 0, 5] }}
         >
           <directionalLight intensity={2.5} position={[0, 0, 5]} />
           <Suspense fallback={<Loader />}>
             <Girl
-              position={[-0.2, -1, 0.5]}
+              position={[-0.2, -2, 0.5]}
               rotation={[0.1, -0.4, 0]}
               scale={1.5}
               currentAnimation={currentAnimation}
             />
-             <MailBox />
+            <MailBox />
           </Suspense>
         </Canvas>
-      </div> */}
-
-      {/* <div className='text-white'>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/> 
-      </div>*/}
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      </div>
     </section>
   )
 }

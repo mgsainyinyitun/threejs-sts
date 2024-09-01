@@ -10,7 +10,7 @@ import { OrbitControls } from '@react-three/drei';
 
 export const About = () => {
   return (
-    <div className='w-full h-full magicpattern'>
+    <div className='w-full h-full magicpattern border-2 overflow-auto'>
       <div className=' w-1/4 md:w-1/6 h-1/2 top-20 right-0 absolute'>
         <Canvas camera={{ position: [0, 0, 5] }}>
           <directionalLight intensity={0.8} color="#FFFFE0" position={[0, 10, 4]} />

@@ -35,7 +35,7 @@ export const About = () => {
           Hi, I'm <span className='font-bold blue-text-gradient'>Sai Nyi</span>
         </h1>
 
-        <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+        <div className='mt-5 flex flex-col gap-3 text-slate-300'>
           <p>
             I am a Software Engineering base in Myanmar, specialize in building (and occasionally designing) exceptional websites, applications, and everything in between.
           </p>
@@ -82,7 +82,7 @@ export const About = () => {
                     }}
                   >
                     <div>
-                      <h3 className='text-slate-400 text-xl font-semibold font-poppins'>{experience.title}</h3>
+                      <h3 className='text-slate-300 text-xl font-semibold font-poppins'>{experience.title}</h3>
 
                       <p className='text-black-500 font-medium font-base' style={{ margin: 0 }}>{experience.company_name}</p>
                     </div>

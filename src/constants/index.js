@@ -28,6 +28,7 @@ import {
     django,
     spring
 } from "../../assets/icons";
+import { basicweb, chatapp, helpdesk, snakegame, ticgame } from "../../assets/projects";
 
 export const skills = [
     {
@@ -206,45 +207,38 @@ export const socialLinks = [
 
 export const projects = [
     {
-        iconUrl: pricewise,
+        iconUrl: chatapp,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        name: 'Chatting App',
+        description: 'This ChatWithFriends web application is a real time chat application that user cancreate account and make friend with other and send message to each other. Also, user can create groupand chat with a group of people in group. This project use firebase as an authentication, firestore as backend database and deploy on google firebase hosting. And Reactjs is used as a frontend framework.You can click Live Demo or if your are curious how I wrote it, you can find source code this project on my gitHub.',
+        link: 'https://web-messenger-sainyi-068390.web.app/',
     },
     {
-        iconUrl: threads,
+        iconUrl: helpdesk,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'Help Desk System',
+        description: 'This help desk system is created with python django combine with web technology such as html, css, javascript and other libraries such as google chart api, bootstrap framework, and many python libraries.And deploy on pythonanywhere.com. You can click Live Demo to explore this app or if your are curious how I wrote it,the source code of this project is on my GitHub.',
+        link: 'http://sainyinyitun.pythonanywhere.com/',
     },
     {
-        iconUrl: car,
+        iconUrl: snakegame,
         theme: 'btn-back-blue',
         name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        description: 'This is Snake Game web app. I also created this using HTML, CSS, Reactjs and deploy it on Netlify. You can click Live Demo to play this Game or if your are curious how I wrote it, source code of this project is on my GitHub.',
+        link: 'https://sai-nyi-snake-game.netlify.app/',
     },
     {
-        iconUrl: snapgram,
+        iconUrl: ticgame,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
+        name: 'Tic-Tac-Toe',
+        description: 'This is Tic-Tac-Toe web app. I created this using HTML, CSS, Reactjs and deploy it on Netlify. You can click Live Demo to play this Game or if your are curious how I wrote it, you can check the souce code of this project on my GitHub.',
         link: 'https://github.com/adrianhajdin/social_media_app',
     },
     {
-        iconUrl: estate,
+        iconUrl: basicweb,
         theme: 'btn-back-black',
         name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        description: 'It is just a basic web design created by only html and css and deploy on vercel.You can click Live Demo button to explore this app or if your are curious how I wrote it, you can check my GitHub for the project source code.',
+        link: 'https://basicwebdesign.mgsainyinyitun.vercel.app/',
     },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-    }
 ];

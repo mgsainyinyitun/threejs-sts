@@ -8,7 +8,7 @@ function Navbar() {
           <p>Sai Nyi</p>
         </NavLink>
 
-        <nav className='flex text-lg gap-7 font-medium'>
+        <nav className='flex text-lg gap-7 font-medium lg:pr-10'>
           <NavLink to='/about' className={({ isActive }) => isActive ? 'text-blue-500' : 'text-gray-300'}>
             About</NavLink>
           <NavLink to='/project' className={({ isActive }) => isActive ? 'text-blue-500' : 'text-gray-300'}>

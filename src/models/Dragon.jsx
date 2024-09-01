@@ -1,6 +1,6 @@
 import { useAnimations, useGLTF } from '@react-three/drei'
 import React, { useEffect, useRef } from 'react'
-import dragonScene from '../../assets/3d/dragon.glb';
+import dragonScene from '../../public/assets/3d/dragon.glb';
 import { useFrame } from '@react-three/fiber';
 
 const Dragon = () => {

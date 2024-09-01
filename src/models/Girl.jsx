@@ -1,6 +1,6 @@
 import React, { act, useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
-import girlScene from '../../assets/3d/character.glb';
+import girlScene from '../../public/assets/3d/character.glb';
 
 const  Girl = ({currentAnimation,...props}) => {
     const group = useRef()

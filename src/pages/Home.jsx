@@ -9,8 +9,8 @@ import { House } from '../models/House'
 import { WorkPlace } from '../models/WorkPlace'
 import Dragon from '../models/Dragon'
 import HomeInfo from '../components/HomeInfo'
-import sakura from '../../assets/sakura.mp3';
-import { soundoff, soundon } from '../../assets/icons'
+import sakura from '../../public/assets/sakura.mp3';
+import { soundoff, soundon } from '../../public/assets/icons'
 import Astronaut from '../models/Astronaut'
 
 export const Home = () => {

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
-import astronaut from '../../assets/3d/astronaut.glb';
+// import astronaut from '../../assets/3d/astronaut.glb';
+import astronaut from '../../public/assets/3d/astronaut.glb'
 import { useAnimations, useGLTF } from '@react-three/drei';
 
 const Astronaut = (props) => {

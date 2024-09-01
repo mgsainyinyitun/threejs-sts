@@ -1,4 +1,4 @@
-import { dat, lbu, technonet, yse } from "../../assets/images";
+import { dat, lbu, technonet, yse } from "../../public/assets/images";
 import {
     bootstrap,
     java,
@@ -27,8 +27,8 @@ import {
     springboot,
     django,
     spring
-} from "../../assets/icons";
-import { basicweb, chatapp, helpdesk, snakegame, ticgame } from "../../assets/projects";
+} from "../../public/assets/icons";
+import { basicweb, chatapp, helpdesk, snakegame, ticgame } from "../../public/assets/projects";
 
 export const skills = [
     {

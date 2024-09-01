@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame, useThree } from '@react-three/fiber'
 import { a } from '@react-spring/three';
 
-import islandScene from '../../assets/3d/foxs_islands.glb'
+import islandScene from '../../public/assets/3d/foxs_islands.glb'
 let intervalId;
 let isMouseDown = false;
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import mail from '../../assets/3d/mailbox.glb';
+import mail from '../../public/assets/3d/mailbox.glb';
 import { useAnimations, useGLTF } from '@react-three/drei';
 
 const MailBox = () => {

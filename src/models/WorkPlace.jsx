@@ -8,7 +8,7 @@ Title: DAE Crib - "Solarpunk Arboretum"
 
 import React, { useEffect, useRef } from 'react'
 import { useGLTF } from '@react-three/drei';
-import workplaceScene from '../../assets/3d/work_place.glb';
+import workplaceScene from '../../public/assets/3d/work_place.glb';
 import { a } from '@react-spring/three';
 import { useFrame, useThree } from '@react-three/fiber';
 

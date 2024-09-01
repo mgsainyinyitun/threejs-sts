@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { a } from '@react-spring/three';
-import houseScene from '../../assets/3d/tiny_house.glb';
+import houseScene from '../../public/assets/3d/tiny_house.glb';
 import { useFrame, useThree } from '@react-three/fiber';
 
 export const House = ({isRotating, setIsRotating, ...props }) => {
